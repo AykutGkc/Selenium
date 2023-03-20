@@ -1,4 +1,4 @@
-package day01;
+package day01_DT;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

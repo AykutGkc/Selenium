@@ -1,9 +1,8 @@
-package day01;
+package day01_DT;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 
 public class C02_DriverMethod {
     public static void main(String[] args) {
