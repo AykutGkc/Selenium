@@ -1,4 +1,4 @@
-package day01_NT_driverMethod;
+package NT.day01_DriverMethod;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
