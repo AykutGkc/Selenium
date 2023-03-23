@@ -29,18 +29,19 @@ public class C07 {
 
         // arama motorunda nutella yazip aratınız
         WebElement aramaMotoru=driver.findElement(By.id("twotabsearchtextbox"));
-        aramaMotoru.sendKeys("nutella"+ Keys.ENTER);
+        aramaMotoru.sendKeys("nutella"+Keys.ENTER);
+
 
         // sayfada kac tane link oldugunu bulunuz
         List<WebElement> linklerListesi =driver.findElements(By.tagName("a"));
         System.out.println("Sayfadaki link sayisi: " + linklerListesi.size());
 
         // linkleri yazdiriniz
-        int sayi=1;
-        for (WebElement webElement : linklerListesi) {
-            System.out.println(sayi+". link : "+webElement.getText());
-            sayi++;
-        }
+//        int sayi=1;
+//        for (WebElement webElement : linklerListesi) {
+//            System.out.println(sayi+". link : "+webElement.getText());
+//            sayi++;
+//        }
 
         // pencereyi kapatiniz
         driver.close();

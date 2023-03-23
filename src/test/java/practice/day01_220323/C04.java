@@ -28,7 +28,7 @@ public class C04 {
 
         // Kaynak Kodlarinda "Gateway" yazdigini test edin
     if (sayfaKaynakKodlari.contains("Gateway")){
-        System.out.println("KAynak kodlarinda Gateway yaziyor");
+        System.out.println("Kaynak kodlarinda Gateway yaziyor");
     }else {
         System.out.println("Kaynak kodlarinda Gateway yazmiyor");
     }
