@@ -16,7 +16,7 @@ public class C02_CssSelector {
     //Delete tusuna basin
     //“Add/Remove Elements” yazisinin gorunur oldugunu test edin
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ChromeOptions ops = new ChromeOptions();
         ops.addArguments("--remote-allow-origins=*");
 
@@ -26,16 +26,32 @@ public class C02_CssSelector {
 
         //https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
+
         //Add Element butonuna basin
         driver.findElement(By.cssSelector("button[onclick='addElement()']")).click();
+        Thread.sleep(3000);
+
         //Delete butonu’nun gorunur oldugunu test edin
         System.out.println(driver.findElement(By.cssSelector("button[class='added-manually']")).isDisplayed());
+
         //Delete tusuna basin
+        Thread.sleep(3000);
         driver.findElement(By.cssSelector("button[class='added-manually']")).click();
 
         //“Add/Remove Elements” yazisinin gorunur oldugunu test edin
-        System.out.println(driver.findElement(By.xpath("//*[text()='Add/Remove Elements']")).isDisplayed());
-        System.out.println(driver.findElement(By.cssSelector("div[id='content']")).isDisplayed());
+        WebElement addRemoveElement=driver.findElement(By.cssSelector("h3"));
+        //Eger xpath ile almak istersek //h3
+        System.out.println("addRemoveElement görünür mü= " + addRemoveElement.isDisplayed());
+
+
+        driver.close();
+
+        /*
+        xPath ile cssSelector arasinda ki farklar:
+            -Xpath metin ile calisabilir cssSelector ile calismaz
+            -Xpath daha fazla kombinasyona sahiptir ve index'e göre arama yapabilir.
+            CssSelector index'e göre arama yapamaz ancak daha hizli calisir.
+         */
 
     }
 }
